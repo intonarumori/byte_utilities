@@ -13,6 +13,8 @@ class ByteReader {
     _position += 1;
     return value;
   }
+
+  bool get isAtEnd => _position == _bytes.length;
 }
 
 extension AkaiByteReader on ByteReader {
