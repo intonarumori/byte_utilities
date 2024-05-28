@@ -28,4 +28,13 @@ class ByteLogging {
   static String toHexList(List<int> data) {
     return '[${data.map((e) => '0x${e.toRadixString(16).padLeft(2, '0').toUpperCase()}').join(', ')}]';
   }
+
+  static String toBits(int byte) {
+    final buffer = StringBuffer();
+    for (var i = 0; i < 8; i++) {
+      final bit = (byte >> (7 - i)) & 0x1;
+      buffer.write(bit == 1 ? '|' : '-');
+    }
+    return buffer.toString();
+  }
 }
