@@ -24,4 +24,5 @@ extension AkaiByteReader on ByteReader {
     // https://en.wikipedia.org/wiki/Offset_binary
     return ((readByte() & 0x7F) << 5 | (readByte() >> 2) & 0x1F) - 0x800;
   }
+
 }
