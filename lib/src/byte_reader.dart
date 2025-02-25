@@ -36,6 +36,7 @@ class ByteReader {
     return ByteData.sublistView(_bytes, p0, _position);
   }
 
+  int readInt8() => _read(1).getInt8(0);
   int readUint8() => _read(1).getUint8(0);
   int readUint16() => _read(2).getUint16(0, _endian);
   int readUint24() => _endian == Endian.little
