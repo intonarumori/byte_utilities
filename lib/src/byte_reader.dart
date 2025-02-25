@@ -6,6 +6,8 @@ class ByteReader {
   
   int _position = 0;
 
+  int get position => _position;
+
 
   ByteReader(Uint8List bytes, [endian = Endian.big])
       : _bytes = bytes,

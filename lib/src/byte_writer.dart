@@ -28,4 +28,6 @@ class ByteWriter {
   void writeString(String s) => s.codeUnits.map((c) => _bytes.addByte(c));
 
   Uint8List toBytes() => _bytes.toBytes();
+
+  int get length => _bytes.length;
 }
